@@ -1,6 +1,6 @@
 # Quack
 
-Go service to keep you IP updated on Duck DNS
+Simple service in Go to keep you IP updated on Duck DNS
 
 ## Instruction
 
