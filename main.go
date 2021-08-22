@@ -9,7 +9,12 @@ import (
 )
 
 func main() {
-	conf, err := model.ReadConfig()
+	config_file := os.Getenv("QUACK_CONFIG")
+	if config_file == "" {
+		config_file = model.CONFIG_PATH
+	}
+
+	conf, err := model.ReadConfig(config_file)
 	if err != nil {
 		log.Fatalln(err)
 		os.Exit(1)
