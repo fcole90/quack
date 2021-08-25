@@ -1,0 +1,23 @@
+name: quack
+version: git
+summary: Duck DNS client
+description: |
+  Keep your IP address updated on Duck DNS
+
+architectures:
+  - build-on: amd64
+    run-on: [amd64, i386, armhf, arm64]
+
+confinement: strict
+base: core20
+parts:
+  quack:
+    plugin: go
+    source: .
+    source-type: git
+    plugs:
+      - home
+      - network
+apps:
+  quack:
+    command: bin/quack
