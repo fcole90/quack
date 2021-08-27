@@ -15,7 +15,7 @@
 bin
 
 # Config file
-config.json
+quack.json
 
 # Dependency directories (remove the comment below to include it)
 # vendor/

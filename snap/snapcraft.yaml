@@ -10,14 +10,24 @@ architectures:
 
 confinement: strict
 base: core20
+
 parts:
   quack:
     plugin: go
     source: .
     source-type: git
-    plugs:
-      - home
-      - network
+    
 apps:
+  config:
+    environment: 
+      QUACK_CONFIG_DIR: "$SNAP_DATA"
+    command: bin/quack config
+  
   quack:
+    environment: 
+      QUACK_CONFIG_DIR: "$SNAP_DATA"
     command: bin/quack
+    daemon: simple
+    plugs:
+      - network
+    

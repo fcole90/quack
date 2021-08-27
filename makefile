@@ -38,4 +38,13 @@ clean:
 	@echo "Cleaning"
 	@GOPATH=$(GOPATH) GOBIN=$(GOBIN) go clean
 
-.PHONY: build get install run watch start stop restart clean
+snap:
+	snapcraft --use-lxd
+
+snapclean:
+	snapcraft clean --use-lxd 
+
+snapdebug:
+	snapcraft --debug --use-lxd
+
+.PHONY: build get install run watch start stop restart clean snap

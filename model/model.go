@@ -6,10 +6,13 @@ import (
 )
 
 const PKG_NAME = "model"
+const CONFIG_FILENAME = "quack.json"
+const DEFAULT_TIME_INTERVAL = 300
 
 type Configuration struct {
 	Token  string `json:"token"`
 	Domain string `json:"domain"`
+	TimeInterval int `json:"timeInterval"`
 }
 
 func ReadConfig(config_path string) (Configuration, error) {
