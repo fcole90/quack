@@ -24,7 +24,7 @@ parts:
     plugin: dump
     organize:
       "check_root": bin/check_root
-    
+
 apps:
   config:
     environment: 
@@ -35,7 +35,7 @@ apps:
     environment: 
       QUACK_CONFIG_DIR: "$SNAP_DATA"
     command: bin/check_root $SNAP/bin/quack set
-  
+
   quack:
     environment: 
       QUACK_CONFIG_DIR: "$SNAP_DATA"
@@ -43,4 +43,3 @@ apps:
     daemon: simple
     plugs:
       - network
-    
