@@ -56,3 +56,9 @@ You can then configure it with
 ```
 
 You can change where to store your configuration by setting the `QUACK_CONFIG_DIR` environment variable.
+
+## Go Package
+
+```
+go get github.com/fcole90/quack
+```
