@@ -17,12 +17,19 @@ parts:
     plugin: go
     source: .
     source-type: git
+  
+  wrappers:
+    plugin: dump
+    source: snap/local
+    plugin: dump
+    organize:
+      "check_root": bin/check_root
     
 apps:
   config:
     environment: 
       QUACK_CONFIG_DIR: "$SNAP_DATA"
-    command: bin/quack config
+    command: bin/check_root $SNAP/bin/quack config
   
   set:
     environment: 

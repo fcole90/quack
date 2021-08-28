@@ -50,6 +50,7 @@ snapdebug:
 snaprebuildandtest:
 	(rm *.snap || true)
 	snapcraft clean quack --use-lxd
+	snapcraft clean wrappers --use-lxd
 	snapcraft --use-lxd
 	snap install ./quack*.snap --dangerous
 

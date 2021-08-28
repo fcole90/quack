@@ -1,0 +1,9 @@
+#!/bin/env bash
+
+# Checks root
+if [[ $EUID -ne 0 ]]
+then
+  echo 'This command needs root'
+else
+  "$@"
+fi
