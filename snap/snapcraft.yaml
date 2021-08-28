@@ -34,7 +34,7 @@ apps:
   set:
     environment: 
       QUACK_CONFIG_DIR: "$SNAP_DATA"
-    command: bin/quack set
+    command: bin/check_root $SNAP/bin/quack set
   
   quack:
     environment: 
