@@ -47,4 +47,10 @@ snapclean:
 snapdebug:
 	snapcraft --debug --use-lxd
 
+snaprebuildandtest:
+	(rm *.snap || true)
+	snapcraft clean quack --use-lxd
+	snapcraft --use-lxd
+	snap install ./quack*.snap --dangerous
+
 .PHONY: build get install run watch start stop restart clean snap

@@ -3,6 +3,7 @@ version: git
 summary: Duck DNS client
 description: |
   Keep your IP address updated on Duck DNS
+grade: stable
 
 architectures:
   - build-on: amd64

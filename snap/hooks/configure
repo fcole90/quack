@@ -1,4 +1,3 @@
 #!/bin/sh -e
 
 QUACK_CONFIG_DIR=$SNAP_DATA $SNAP/bin/quack set -token="$(snapctl get token)" -domain="$(snapctl get domain)" -timeinterval="$(snapctl get timeinterval)"
-snapctl start --enable quack.quack
