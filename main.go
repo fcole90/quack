@@ -14,7 +14,7 @@ import (
 )
 
 const ENV_QUACK_CONFIG = "QUACK_CONFIG_DIR"
-const DEFAULT_CONFIG_FILENAME = "./config.json"
+const DEFAULT_CONFIG_FILENAME = "./quack_config.json"
 
 func getConfigPath() string {
 	envConfigFilePath := os.Getenv(ENV_QUACK_CONFIG)
