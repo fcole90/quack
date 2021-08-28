@@ -73,7 +73,11 @@ func setConfig(args []string) {
 		} else if strings.HasPrefix(arg, domainArg) {
 			conf.Domain = parseStringArg(arg, domainArg)
 		} else if strings.HasPrefix(arg, timeIntervalArg) {
-			conf.TimeInterval = parseIntArg(arg, timeIntervalArg)
+			if parseStringArg(arg, timeIntervalArg) == "" {
+				conf.TimeInterval = model.DEFAULT_TIME_INTERVAL
+			} else {
+				conf.TimeInterval = parseIntArg(arg, timeIntervalArg)
+			}
 		} else {
 			panic(fmt.Errorf(`argument "%s" not understood`, arg))
 		}

@@ -23,6 +23,11 @@ apps:
       QUACK_CONFIG_DIR: "$SNAP_DATA"
     command: bin/quack config
   
+  set:
+    environment: 
+      QUACK_CONFIG_DIR: "$SNAP_DATA"
+    command: bin/quack set
+  
   quack:
     environment: 
       QUACK_CONFIG_DIR: "$SNAP_DATA"
