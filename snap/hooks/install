@@ -1,4 +1,5 @@
 #!/bin/sh -e
 
-snapctl stop --disable quack.quack
+snapctl stop quack.quack
 QUACK_CONFIG_DIR=$SNAP_DATA $SNAP/bin/quack set # Creates default configuration
+snapctl start quack.quack
